@@ -14,9 +14,9 @@ inputs:
     require: true
     default: ./Dockerfile
   branch_tag:
-      description: use branch name as tag
-      require: false
-      default: false
+    description: use branch name as tag
+    require: false
+    default: false
   cache:
     description: attempt to use last image as the cache
     require: false
@@ -24,6 +24,10 @@ inputs:
   tag:
     description: custom tag you want to assign to the image.  
     require: false
+  build_params:
+    description: Additional build params you can pass into the docker build command.
+    require: false
+    default: ''
 outputs:
   IMAGE_SHA_NAME:
     description: name of the Docker Image including the tag

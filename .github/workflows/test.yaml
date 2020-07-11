@@ -10,11 +10,12 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish Docker Image to GPR
-      uses: machine-learning-apps/gpr-docker-publish@master
+      uses: dhainzl/gpr-docker-publish@master
       with:
         IMAGE_NAME: 'test-docker-action-v2'
         TAG: 'my-optional-tag-name'
         DOCKERFILE_PATH: 'Dockerfile'
         BUILD_CONTEXT: '.'
+        BUILD_PARAMS: "--build-arg foo=bar --build-arg msg=hello"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
