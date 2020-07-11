@@ -27,6 +27,9 @@ if [[ -z "$INPUT_BUILD_CONTEXT" ]]; then
 	exit 1
 fi
 
+echo "-------- build-args --------"
+echo $BUILD_ARGS
+echo "----------------------------"
 
 # The following environment variables will be provided by the environment automatically: GITHUB_REPOSITORY, GITHUB_SHA
 
