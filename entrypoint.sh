@@ -51,12 +51,6 @@ if [ "${INPUT_CACHE}" == "true" ]; then
    fi
 fi
 
-echo "-------------------------"
-echo ${INPUT_BUILD_PARAMS}
-echo "-------------------------"
-echo docker build $BUILDPARAMS ${INPUT_BUILD_PARAMS} -t ${SHA_NAME} -t ${BASE_NAME} -t ${CUSTOM_TAG} -f ${INPUT_DOCKERFILE_PATH} ${INPUT_BUILD_CONTEXT}
-echo "-------------------------"
-
 # Build The Container
 if [ "${INPUT_TAG}" ]; then
    CUSTOM_TAG="${BASE_NAME}:${INPUT_TAG}"
