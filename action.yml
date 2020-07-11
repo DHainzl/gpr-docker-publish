@@ -24,9 +24,10 @@ inputs:
   tag:
     description: custom tag you want to assign to the image.  
     require: false
-  build_args:
-    description: Key/Value pairs which are passed as --build-arg to the docker build command
+  build_params:
+    description: Additional build params you can pass into the docker build command.
     require: false
+    default: ''
 outputs:
   IMAGE_SHA_NAME:
     description: name of the Docker Image including the tag
