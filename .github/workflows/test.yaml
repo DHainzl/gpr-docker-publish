@@ -16,8 +16,6 @@ jobs:
         TAG: 'my-optional-tag-name'
         DOCKERFILE_PATH: 'Dockerfile'
         BUILD_CONTEXT: '.'
-        BUILD_ARGS:
-          foo: bar
-          hello: world
+        BUILD_ARGS: 'foo=bar msg="hello world"'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
