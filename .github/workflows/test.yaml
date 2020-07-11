@@ -10,7 +10,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Publish Docker Image to GPR
-      uses: dhainzl/gpr-docker-publish@master
+      uses: dhainzl/gpr-docker-publish@dhainzl/build-args
       with:
         IMAGE_NAME: 'test-docker-action-v2'
         TAG: 'my-optional-tag-name'
